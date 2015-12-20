@@ -1,0 +1,272 @@
+actions:
+
+	add-account
+	del-account
+	get-account-apikey
+	activate-account
+
+	add-network
+	del-network
+	list-network
+	update-network-description
+
+	add-node
+	del-node
+	list-node
+	update-node-description
+
+	response
+
+result:
+
+	denied
+	duplicate
+	more-data
+	no-such-object
+	operation-error
+	protocol-error
+	success
+
+objects:
+
+	"account": {
+		"email": "",
+		"password": "",
+		"apikey": ""
+	}
+
+	"network": {
+		"uuid": "",
+		"description": ""
+	}
+
+	"node": {
+		"network-uuid": "",
+		"uuid": "",
+		"description": "",
+		"provcode": "",
+		"ipaddress": "",
+		"status": ""
+	}
+
+
+add-account
+{
+	"tid": "",
+	"action": "add-account",
+	"email": "",
+	"password": ""
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+del-account
+{
+	"tid": "",
+	"action": "del-account",
+	"email": "",
+	"password": ""
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+get-account-apikey
+{
+	"tid": "",
+	"action": "get-account-apikey",
+	"email": "",
+	"passord": ""
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+activate-account
+{
+	"tid": "",
+	"action": "activate-account",
+	"apikey": "",
+	"email": ""
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+add-network
+{
+	"tid": "",
+	"action": "add-network",
+	"apikey": "",
+	[
+		"network": {
+			"description": ""
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+del-network
+{
+	"apikey": "",
+	"action": "del-network"
+	[
+		"network": {
+			"uuid": ""
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+list-network
+{
+	"tid": "",
+	"action": "list-network",
+	"apikey": ""
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": "",
+	[
+		"network": {
+			"description": ""
+		},
+		"network": {
+			"description:" ""
+		}
+	]
+}
+
+update-network-description
+{
+	"tid": "",
+	"action": "update-network-description",
+	"apikey": "",
+	[
+		"network": {
+			"uuid": "",
+			"new-description": ""
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+add-node
+{
+	"tid": "",
+	"action": "add-node",
+	"apikey": "",
+	[
+		"node": {
+			"network-uuid": "",
+			"description": "",
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+del-node
+{
+	"tid": "",
+	"action": "del-node",
+	"apikey": "",
+	[
+		"node": {
+			"network-uuid": "",
+			"description": "",
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
+
+list-node
+
+{
+	"tid": "",
+	"action": "list-node",
+	"apikey": "",
+	[
+		"network": {
+			"uuid": "",
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": "",
+	[
+		"node": {
+			"description": "",
+			"provcode": "",
+			"ipaddress": "",
+			"status": "",
+		},
+		"node": {
+			"description": "",
+			"provcode": "",
+			"ipaddress": "",
+			"status": "",
+		}
+	]
+}
+
+update-node-description
+{
+	"tid": "",
+	"action": "update-node-description",
+	"apikey": "",
+	[
+		"node": {
+			"uuid": "",
+			"new-description": ""
+		}
+	]
+}
+
+{
+	"tid": "",
+	"action": "response",
+	"response": ""
+}
